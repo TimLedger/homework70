@@ -2,7 +2,7 @@ import {Contact, Contacts} from "../types";
 import { createSlice } from "@reduxjs/toolkit";
 import {contactsList, contactsOne, contactsAdd, contactsEdit, contactsDelete} from "./contactsThunk";
 
-interface IShowsState {
+interface ContactsState {
     contacts: Contacts[] | [];
     contact: Contact | null;
     getLoading: boolean;
@@ -11,7 +11,7 @@ interface IShowsState {
     deleteLoading: boolean;
 }
 
-const initialState: IShowsState = {
+const initialState: ContactsState = {
     contacts: [],
     contact: null,
     getLoading: false,
@@ -20,8 +20,8 @@ const initialState: IShowsState = {
     deleteLoading: false,
 };
 
-const getContacts = createSlice({
-    name: "shows",
+const contactsSlice = createSlice({
+    name: "contacts",
     initialState,
     reducers: {},
     extraReducers: (builder) => {
@@ -79,4 +79,4 @@ const getContacts = createSlice({
     },
 });
 
-export const contactsReducers = getContacts.reducer;
+export const contactsReducers = contactsSlice.reducer;

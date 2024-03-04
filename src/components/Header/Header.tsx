@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Toolbar from '../Toolbar/Toolbar';
 import './Header.css';
 
 const Header: React.FC = () => {
@@ -10,6 +11,7 @@ const Header: React.FC = () => {
                     <NavLink className={'logo'} to="/" end>
                         <h3>Контакты</h3>
                     </NavLink>
+                    <Toolbar />
                 </div>
             </div>
         </header>
