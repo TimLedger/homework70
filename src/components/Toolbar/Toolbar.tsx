@@ -11,6 +11,6 @@ const Toolbar = () => {
             </ul>                       
         </nav>
     );
-}
+};
 
 export default Toolbar;
